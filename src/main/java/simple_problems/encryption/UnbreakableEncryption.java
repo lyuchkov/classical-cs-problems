@@ -17,7 +17,7 @@ public class UnbreakableEncryption<T> {
         return dummy;
     }
 
-    private static String decryptString(KeyPair keyPair) {
+    private String decryptString(KeyPair keyPair) {
         byte[] decrypted = new byte[keyPair.key1.length];
         for (int i = 0; i < decrypted.length; i++) {
             decrypted[i] = (byte) (keyPair.key1[i] ^ keyPair.key2[i]);
